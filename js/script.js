@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function() {
     const inputField = document.getElementById('entryinput');
     const alertButton = document.getElementById('entrybutton');
     const outputText = document.getElementById('textoutput');
-    const yourName = "Archit Singh"; // replace with your name
+    const yourName = "Archit singh"; // replace with your name
 
     function showMessage() {
         const userInput = inputField.value.trim();
