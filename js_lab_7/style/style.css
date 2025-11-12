@@ -22,7 +22,7 @@
   margin: 20px auto;
   font-size: 24px;
   font-weight: bold;
-  cursor: pointer; /* Makes it look clickable */
+  cursor: pointer;
 }
 
 #entrybutton:hover {

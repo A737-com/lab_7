@@ -1,33 +1,24 @@
-function init() {
-    // Get references to DOM elements
+window.addEventListener('DOMContentLoaded', function() {
     const inputField = document.getElementById('entryinput');
     const alertButton = document.getElementById('entrybutton');
     const outputText = document.getElementById('textoutput');
+    const yourName = "Vincint Silver"; // replace with your actual name
 
-    // Function to show alert and update h2
     function showMessage() {
-        const yourName = "Archit Singh"; // Replace with your name
-        const userInput = inputField.value;
-
-        if (!userInput.trim()) return; // Ignore empty input
-
-        // Show alert
+        const userInput = inputField.value.trim();
+        if (!userInput) {
+            return; // if empty, do nothing
+        }
         alert(`${yourName}: ${userInput}`);
-
-        // Update h2 below the button
         outputText.textContent = userInput;
     }
 
-    // Click event for the div
     alertButton.addEventListener('click', showMessage);
 
-    // Trigger same action when Enter key is pressed in input
     inputField.addEventListener('keydown', function(e) {
-        if (e.key === "Enter") {
+        if (e.key === "Enter" || e.keyCode === 13) {
+            e.preventDefault(); // Prevent form submission
             showMessage();
         }
     });
-}
-
-// Run init when window loads
-window.addEventListener('load', init);
+});
